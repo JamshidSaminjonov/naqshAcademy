@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://naqshacademy.uz/</loc>
+        <lastmod>2023-09-02</lastmod>
+        <priority>1.0</priority>
+        <title>Bosh sahifa</title>
+    </url>
+    <url>
+        <loc>http://naqshacademy.uz/#courses</loc>
+        <lastmod>2023-09-02</lastmod>
+        <priority>0.8</priority>
+        <title>Kurslar</title>
+    </url>
+    <url>
+        <loc>http://naqshacademy.uz/#about</loc>
+        <lastmod>2023-09-02</lastmod>
+        <priority>0.6</priority>
+        <title>Biz haqimizda</title>
+    </url>
+    <url>
+        <loc>http://naqshacademy.uz/#contact</loc>
+        <lastmod>2023-09-02</lastmod>
+        <priority>0.4</priority>
+        <title>Kontakt</title>
+    </url>
+</urlset>

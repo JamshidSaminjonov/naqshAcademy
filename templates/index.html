@@ -1,0 +1,210 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="container">
+        <!--Navbar-->
+        <div class="navbar my-2">
+            <div class="d-flex align-items-center">
+                <img src="{% static 'img/naqsh.svg' %}" alt="naqsh academy logo" width="72" height="72">
+                <div class="ms-2">
+                    <span class="d-block fs-4">Naqsh</span>
+                    <span class="d-block">academy</span>
+                </div>
+            </div>
+            <div class="d-none d-lg-flex">
+                <div class="ms-5 fs-5 font-weight-medium">
+                    <a href="#courses" class="text-dark text-decoration-none">Kurslar</a>
+                </div>
+                <div class="ms-5 fs-5 font-weight-medium">
+                    <a href="#about" class="text-dark text-decoration-none">Biz haqimizda</a>
+                </div>
+                <div class="ms-5 fs-5 font-weight-medium">
+                    <a href="#contact" class="text-dark text-decoration-none">Kontakt</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Intro-->
+        <div class="row gx-lg-5 gx-xl-2 my-xl-5">
+            <div class="col-12 col-lg-8 offset-lg-0 my-5 my-lg-auto">
+                <div class="fw-bold fs-1 text-center text-lg-start">Kelajagingni <span
+                        class="text-yellow">Naqsh academy</span><br> bilan bunyod et
+                </div>
+                <div class="fs-5 text-center text-lg-start text-dark">Zamonaviy sohalarni o’rganish orqali zamon<br>
+                    bilan hamnafas bo’l
+                </div>
+            </div>
+            <div class="col-8 offset-2 col-lg-4 offset-lg-0">
+                <img src="{% static 'img/intro.png' %}" alt="naqsh academy intro" class="w-100">
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <!--Afzalliklar-->
+        <div>
+            <div class="d-inline">
+                <div class="fw-bold fs-1">Afzalliklarimiz</div>
+                <div class="header-underline"></div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center">
+                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle px-4 py-3 fs-2 background-light-yellow text-yellow">
+                        <i class="bi bi-person"></i>
+                    </div>
+                    <div class="fs-4 mt-2 font-weight-medium">Sifatli ta'lim</div>
+                    <div class="text-center mt-2 text-secondary">Malakali ustozlardan sifatli <br> ta’lim oling</div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mt-5 mt-md-0 d-flex flex-column align-items-center">
+                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle px-4 py-3 fs-2 background-light-yellow text-yellow">
+                        <i class="bi bi-book"></i>
+                    </div>
+                    <div class="fs-4 mt-2 font-weight-medium">O’quv materiallar</div>
+                    <div class="text-center mt-2 text-secondary">Turli xil o’quv materiallardan <br> foydalanish
+                        imkoniyati
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mt-5 mt-lg-0 mx-auto d-flex flex-column align-items-center">
+                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle px-4 py-3 fs-2 background-light-yellow text-yellow">
+                        <i class="bi bi-fire"></i>
+                    </div>
+                    <div class="fs-4 mt-2 font-weight-medium">Qiziqarli musobaqalar</div>
+                    <div class="text-center mt-2 text-secondary">Har oy turli xil musobaqalarda <br> qatnashish</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <!--Kurslarimiz-->
+        <div id="courses">
+            <div class="d-inline">
+                <div class="fw-bold fs-1">Kurslarimiz</div>
+                <div class="header-underline"></div>
+            </div>
+            <div class="row mt-5 gy-4">
+                {% for course in courses %}
+                    <div class="col-12 col-md-8 col-lg-6 mx-auto d-flex">
+                        <div class="p-4 w-100 border-yellow">
+                            <div class="fs-3 font-weight-medium">{{ course.title }}</div>
+                            <div class="mt-3 text-dark" style="line-height: 24px; height: 48px">{{ course.about }}</div>
+                            {% if course.active %}
+                                <div class="mt-5 font-weight-medium">Davomiyligi: {{ course.duration }}oy</div>
+                            {% else %}
+                                <div class="mt-5 font-weight-medium">Tez kunda</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <!--Biz haqimizda-->
+        <div id="about">
+            <div class="d-inline">
+                <div class="fw-bold fs-1">Biz haqimizda</div>
+                <div class="header-underline"></div>
+            </div>
+
+            <div class="mt-5 fs-4 text-dark lh-lg">
+                {{ variables.about }}
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <!--Galereya-->
+        <div>
+            <div class="d-inline">
+                <div class="fw-bold fs-1">Galereya</div>
+                <div class="header-underline"></div>
+            </div>
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper mt-5">
+                <div class="swiper-wrapper">
+                    {% for gallery in galleries %}
+                        <div class="swiper-slide swiper-slide-size"
+                             style="background-image: url('{{ gallery.image.url }}')"></div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <!--Nega aynan Naqsh academy?-->
+        <div>
+            <div class="d-inline">
+                <div class="fw-bold fs-1">Nega aynan <span class="text-yellow">Naqsh academy?</span></div>
+                <div class="header-underline"></div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 col-md-7">
+                    <img src="{% static 'img/about.png' %}" alt="naqsh academy about" class="w-100">
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="fs-3 lh-lg text-dark mt-3 mt-md-0">
+                        {{ variables.why }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <!--Kontakt-->
+        <div id="contact">
+            <div class="d-inline">
+                <div class="fw-bold fs-1">Kontakt</div>
+                <div class="header-underline"></div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 col-md-7">
+                    <iframe src="{{ variables.map }}"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="font-weight-medium fs-4 mt-3 mt-md-0">{{ variables.address }}</div>
+                    <div class="text-secondary fs-5 mt-1">Mo‘ljal: {{ variables.target }}</div>
+
+                    <div class="font-weight-medium fs-4 mt-4">Telefon raqam</div>
+                    <div class="text-secondary fs-5 mt-1">{{ variables.phone }}</div>
+
+                    <div class="font-weight-medium fs-4 mt-4">Tarmoqdagi manzillar</div>
+                    <div class="text-secondary mt-3 fs-4">
+                        <a href="{{ variables.telegram }}" target="_blank" class="text-decoration-none">
+                            <i class="bi bi-telegram text-yellow me-4"></i>
+                        </a>
+                        <a href="{{ variables.youtube }}" target="_blank" class="text-decoration-none">
+                            <i class="bi bi-youtube text-yellow me-4"></i>
+                        </a>
+                        <a href="{{ variables.instagram }}" target="_blank" class="text-decoration-none">
+                            <i class="bi bi-instagram text-yellow me-4"></i>
+                        </a>
+                        <a href="{{ variables.facebook }}" target="_blank" class="text-decoration-none">
+                            <i class="bi bi-facebook text-yellow me-4"></i>
+                        </a>
+                        <a href="{{ variables.tiktok }}" target="_blank" class="text-decoration-none">
+                            <i class="bi bi-tiktok text-yellow me-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="bg-light text-center py-4 font-weight-medium">
+        <div>© Naqsh academy, {{ current_year }}</div>
+        <div>Barcha huquqlar himoyalangan</div>
+    </div>
+{% endblock %}
