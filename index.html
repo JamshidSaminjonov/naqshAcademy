@@ -44,6 +44,16 @@
 
     <!-- Template Main CSS File -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("onLV3cEkzx3x3sEAk");
+      })();
+    </script>
   </head>
 
   <body>
@@ -177,7 +187,9 @@
                 Kursda ingliz tilining grammatika asoslari o’rgatiladi
               </div>
               <div class="mt-5 font-weight-medium"></div>
-              <div class="mt-5 font-weight-medium">Davomiyligi: 6oy</div>
+              <div class="d-flex justify-c align-items-center">
+                <div class="mt-5 font-weight-medium">Davomiyligi: 6oy</div>
+              </div>
             </div>
           </div>
           <div class="col-12 col-md-8 col-lg-6 mx-auto d-flex">
@@ -350,23 +362,31 @@
           <div class="header-underline"></div>
         </div>
 
-        <div class="row mt-5">
-          <div class="col-12 col-md-7">
+        <div class="row mt-5 quality">
+          <div class="col-12 col-lg-5">
             <img src="img/about1.jpg" alt="naqsh academy about" class="w-100" />
           </div>
-          <div class="col-12 col-md-5">
+          <div class="col-12 col-lg-7">
             <div class="fs-3 lh-lg text-dark mt-3 mt-md-0">
-              1. Amaliy yondashuv 2. Zamonaviy dasturlar va texnologiyalar: 3.
-              Startaplar/kompaniyalar bilan hamkorlik 4. Keng qamrovli ta'lim
-              dasturlari 5. Joylashuv qulayligi va infrastruktura: Qoratoshda,
-              Chorsu va Xalqlar do’stligi Metrosi yaqinida joylashgan 6. Til
-              o'rganish imkoniyatlari: Ingliz tili kurslari ham barcha
+              1. Amaliy yondashuv
+            </div>
+            <div class="fs-3 lh-lg text-dark mt-3 mt-md-0">
+              2. Zamonaviy dasturlar va texnologiyalar
+            </div>
+            <div class="fs-3 lh-lg text-dark mt-3 mt-md-0">
+              3. Startaplar/kompaniyalar bilan hamkorlik
+            </div>
+            <div class="fs-3 lh-lg text-dark mt-3 mt-md-0">
+              4. Til o'rganish imkoniyatlari: Ingliz tili kurslari ham barcha
               darajadagi o'quvchilar uchun taqdim etiladi
+            </div>
+            <div class="fs-3 lh-lg text-dark mt-3 mt-md-0">
+              5. Joylashuv qulayligi va infrastruktura: Qoratoshda, Chorsu va
+              Xalqlar do’stligi Metrosi yaqinida joylashgan
             </div>
           </div>
         </div>
       </div>
-
       <div class="spacer"></div>
 
       <!--Kontakt-->
@@ -459,11 +479,34 @@
           </div>
         </div>
       </div>
+
+      <div class="spacer"></div>
+
+      <!--Form -->
+
+      <div id="form">
+        <div class="d-inline">
+          <div class="fw-bold fs-1">Biz bilan bog'lanish</div>
+          <div class="header-underline"></div>
+        </div>
+        <div class="row mt-5 gy-4">
+          <div class="col-12 col-md-8 col-lg-6 mx-auto">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" onclick="sendEmail()">Submit</button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="spacer"></div>
-
-    <div class="bg-light text-center py-4 font-weight-medium">
+    <div class="mt-5 bg-light text-center py-4 font-weight-medium">
       <div>© Naqsh academy, 2024</div>
       <div>Barcha huquqlar himoyalangan</div>
     </div>
