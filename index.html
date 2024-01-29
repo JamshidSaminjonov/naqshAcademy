@@ -177,7 +177,10 @@
           <div class="header-underline"></div>
         </div>
         <div class="row mt-5 gy-4">
-          <div class="col-12 col-md-8 col-lg-6 mx-auto d-flex">
+          <div
+            class="col-12 col-md-8 col-lg-6 mx-auto d-flex"
+            onclick="goToAnotherPage('ingliz')"
+          >
             <div class="p-4 w-100 border-yellow">
               <div class="fs-3 font-weight-medium">Ingliz tili</div>
               <div
@@ -187,12 +190,13 @@
                 Kursda ingliz tilining grammatika asoslari o’rgatiladi
               </div>
               <div class="mt-5 font-weight-medium"></div>
-              <div class="d-flex justify-c align-items-center">
-                <div class="mt-5 font-weight-medium">Davomiyligi: 6oy</div>
-              </div>
+              <div class="mt-5 font-weight-medium">Davomiyligi: 6oy</div>
             </div>
           </div>
-          <div class="col-12 col-md-8 col-lg-6 mx-auto d-flex">
+          <div
+            class="col-12 col-md-8 col-lg-6 mx-auto d-flex"
+            onclick="goToAnotherPage('itforkids')"
+          >
             <div class="p-4 w-100 border-yellow">
               <div class="fs-3 font-weight-medium">Boshlang’ich IT</div>
               <div
@@ -205,7 +209,10 @@
               <div class="mt-5 font-weight-medium">Davomiyligi: 3oy</div>
             </div>
           </div>
-          <div class="col-12 col-md-8 col-lg-6 mx-auto d-flex">
+          <div
+            class="col-12 col-md-8 col-lg-6 mx-auto d-flex"
+            onclick="goToAnotherPage('python')"
+          >
             <div class="p-4 w-100 border-yellow">
               <div class="fs-3 font-weight-medium">Python</div>
               <div
@@ -219,7 +226,10 @@
               <div class="mt-5 font-weight-medium">Davomiyligi: 4oy</div>
             </div>
           </div>
-          <div class="col-12 col-md-8 col-lg-6 mx-auto d-flex">
+          <div
+            class="col-12 col-md-8 col-lg-6 mx-auto d-flex"
+            onclick="goToAnotherPage('fstack')"
+          >
             <div class="p-4 w-100 border-yellow">
               <div class="fs-3 font-weight-medium">Full Stack Python</div>
               <div
@@ -232,7 +242,10 @@
               <div class="mt-5 font-weight-medium">Tez kunda</div>
             </div>
           </div>
-          <div class="col-12 col-md-8 col-lg-6 mx-auto d-flex">
+          <div
+            class="col-12 col-md-8 col-lg-6 mx-auto d-flex"
+            onclick="goToAnotherPage('gdizayn')"
+          >
             <div class="p-4 w-100 border-yellow">
               <div class="fs-3 font-weight-medium">Grafik dizayn</div>
               <div
@@ -246,7 +259,10 @@
               <div class="mt-5 font-weight-medium">Tez kunda</div>
             </div>
           </div>
-          <div class="col-12 col-md-8 col-lg-6 mx-auto d-flex">
+          <div
+            class="col-12 col-md-8 col-lg-6 mx-auto d-flex"
+            onclick="goToAnotherPage('frontend')"
+          >
             <div class="p-4 w-100 border-yellow">
               <div class="fs-3 font-weight-medium">Frontend</div>
               <div
@@ -260,7 +276,10 @@
               <div class="mt-5 font-weight-medium">Tez kunda</div>
             </div>
           </div>
-          <div class="col-12 col-md-8 col-lg-6 mx-auto d-flex">
+          <div
+            class="col-12 col-md-8 col-lg-6 mx-auto d-flex"
+            onclick="goToAnotherPage('vdizayn')"
+          >
             <div class="p-4 w-100 border-yellow">
               <div class="fs-3 font-weight-medium">Veb dizayn</div>
               <div
@@ -273,7 +292,10 @@
               <div class="mt-5 font-weight-medium">Tez kunda</div>
             </div>
           </div>
-          <div class="col-12 col-md-8 col-lg-6 mx-auto d-flex">
+          <div
+            class="col-12 col-md-8 col-lg-6 mx-auto d-flex"
+            onclick="goToAnotherPage('mstack')"
+          >
             <div class="p-4 w-100 border-yellow">
               <div class="fs-3 font-weight-medium">MERN Stack</div>
               <div
@@ -490,7 +512,12 @@
           <div class="header-underline"></div>
         </div>
         <div class="row mt-5 gy-4">
-          <div class="col-12 col-md-8 col-lg-6 mx-auto">
+          <form
+            class="col-12 col-md-8 col-lg-6 mx-auto"
+            id="myForm"
+            action="javascript:void(0);"
+            method="post"
+          >
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required />
 
@@ -501,7 +528,7 @@
             <textarea id="message" name="message" rows="4" required></textarea>
 
             <button type="submit" onclick="sendEmail()">Submit</button>
-          </div>
+          </form>
         </div>
       </div>
     </div>
