@@ -55,8 +55,40 @@ function goToAnotherPage(type) {
     case "gdizayn":
       var targetPageURL = "courses/gdizayn.html";
       break;
+    case "main":
+      var targetPageURL = "../index.html";
+      break;
+    case "../index/#kurslar":
+      var targetPageURL = "../index.html#courses";
+      break;
     default:
+      var targetPageURL = type;
       break;
   }
   window.location.href = targetPageURL;
+}
+
+// Function to show the icon when the card is hovered
+function showIcon() {
+  document.querySelector(".icon").style.display = "block";
+}
+
+// Function to hide the icon when the mouse leaves the card
+function hideIcon() {
+  document.querySelector(".icon").style.display = "none";
+}
+
+// Function to toggle the visibility of the content
+function toggleContent(num) {
+  var rotate = document.querySelectorAll(".rotateIcon");
+  rotate[num].classList.toggle("addi");
+
+  var content = document.querySelectorAll(".collapsibleContent");
+  content.forEach((item, index) => {
+    if (num == index) {
+      item.classList.toggle("d-none");
+      item.classList.toggle("d-block");
+      console.log(item, num);
+    }
+  });
 }

@@ -2,6 +2,9 @@
   font-family: Poppins, sans-serif;
   scroll-behavior: smooth;
 }
+.mainPage x {
+  cursor: pointer;
+}
 
 .text-yellow {
   color: #fa6511;
@@ -113,4 +116,52 @@ button:hover {
 
 .border-yellow {
   border: 1px solid #fa6511;
+  transition: all ease 0.4s;
+}
+
+.border-yellow:hover {
+  background-color: #fa6511;
+  cursor: pointer;
+  color: white;
+}
+.icon {
+  cursor: pointer;
+  color: blue;
+  display: none;
+}
+.full {
+  background-image: url(../img/about.png);
+  background-attachment: fixed;
+  position: relative;
+  background-size: cover;
+  height: 150px;
+}
+.bg-overflow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+}
+.rotateIcon {
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.addi {
+  transform: rotate(90deg);
+}
+/* footer */
+.footer {
+  background-color: #170485;
+  color: white;
+}
+.btn-hover {
+  color: #fa6511;
+  border: 1px solid #fa6511;
+  border-radius: 8px;
+}
+.btn-hover:hover {
+  background-color: #fa6511;
+  color: white;
 }
