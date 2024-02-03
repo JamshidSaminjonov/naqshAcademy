@@ -153,8 +153,32 @@ button:hover {
 }
 /* footer */
 .footer {
-  background-color: #170485;
-  color: white;
+  background-color: #ffffff;
+  color: #b9b9b9;
+}
+.footer a {
+  color: #b9b9b9;
+}
+
+.footer a i {
+  padding: 0 3px;
+  transition: all ease 0.3s;
+}
+.footer a i:hover {
+  border: none;
+  padding: 0 3px;
+  border-radius: 5px;
+  background-color: #faa776;
+  color: #fa6511;
+  margin: 0;
+}
+
+.footer a:hover {
+  opacity: 0.7;
+}
+
+.footer a:active {
+  opacity: 0.5;
 }
 .btn-hover {
   color: #fa6511;
@@ -164,4 +188,12 @@ button:hover {
 .btn-hover:hover {
   background-color: #fa6511;
   color: white;
+}
+.intro-font {
+  font-size: 80px;
+}
+.footer-underline {
+  border: 1px solid;
+  color: #b9b9b9;
+  width: 100%;
 }
