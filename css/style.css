@@ -111,7 +111,7 @@ button:hover {
 }
 
 .spacer {
-  height: 160px;
+  height: 60px;
 }
 
 .border-yellow {
@@ -152,6 +152,9 @@ button:hover {
   transform: rotate(90deg);
 }
 /* footer */
+.text-medium {
+  color: #353535;
+}
 .footer {
   background-color: #ffffff;
   color: #b9b9b9;
@@ -182,10 +185,6 @@ button:hover {
 }
 .btn-hover {
   color: #fa6511;
-  border: 1px solid #fa6511;
-  border-radius: 8px;
-}
-.btn-hover:hover {
   background-color: #fa6511;
   color: white;
 }
@@ -196,4 +195,7 @@ button:hover {
   border: 1px solid;
   color: #b9b9b9;
   width: 100%;
+}
+.text-medium {
+  color: #b9b9b9;
 }
